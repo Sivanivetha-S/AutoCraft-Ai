@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 
 // Landing page
@@ -23,7 +23,7 @@ import SettingsPage from './app/pages/SettingsPage.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <AppProvider>
         <Routes>
           {/* Landing page */}
@@ -43,6 +43,6 @@ createRoot(document.getElementById('root')).render(
           </Route>
         </Routes>
       </AppProvider>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
